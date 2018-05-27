@@ -3,9 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMS", "IMS\IMS.csproj", "{7BF2443B-CD49-4267-92CE-9A005A390CF5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMS.Web", "IMS\IMS.Web.csproj", "{7BF2443B-CD49-4267-92CE-9A005A390CF5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMS.Tests", "IMS.Tests\IMS.Tests.csproj", "{578C514D-CA0B-4764-9814-CCFD7F8E1F46}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BC60DDF8-B083-477C-952C-890B8EBA8DCD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B49C4188-7DFF-420D-8C6E-BA6A26BED2C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMS.Core", "IMS.Core\IMS.Core.csproj", "{80DD197A-3A39-42B2-9C97-546DF8969500}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMS.Infrastructure", "IMS.Infrastructure\IMS.Infrastructure.csproj", "{D45726C6-12C0-4B77-A987-EE454D197CA0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +29,23 @@ Global
 		{578C514D-CA0B-4764-9814-CCFD7F8E1F46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{578C514D-CA0B-4764-9814-CCFD7F8E1F46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{578C514D-CA0B-4764-9814-CCFD7F8E1F46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80DD197A-3A39-42B2-9C97-546DF8969500}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80DD197A-3A39-42B2-9C97-546DF8969500}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80DD197A-3A39-42B2-9C97-546DF8969500}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80DD197A-3A39-42B2-9C97-546DF8969500}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D45726C6-12C0-4B77-A987-EE454D197CA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D45726C6-12C0-4B77-A987-EE454D197CA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D45726C6-12C0-4B77-A987-EE454D197CA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D45726C6-12C0-4B77-A987-EE454D197CA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7BF2443B-CD49-4267-92CE-9A005A390CF5} = {BC60DDF8-B083-477C-952C-890B8EBA8DCD}
+		{578C514D-CA0B-4764-9814-CCFD7F8E1F46} = {B49C4188-7DFF-420D-8C6E-BA6A26BED2C2}
+		{80DD197A-3A39-42B2-9C97-546DF8969500} = {BC60DDF8-B083-477C-952C-890B8EBA8DCD}
+		{D45726C6-12C0-4B77-A987-EE454D197CA0} = {BC60DDF8-B083-477C-952C-890B8EBA8DCD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {60C738AF-F6E1-4BAD-94D9-21379564206B}
