@@ -68,12 +68,7 @@ namespace IMS.Infrastructure.Services
 
         public List<Category> GetAllCategories()
         {
-            //   var categories = _categoryRepository.List();
-            var categories = new List<Category>()
-            {
-                new Category { Id = 1,Name = "Drinks", Description = "Beverages",IsActive = true },
-                new Category { Id = 2, Name = "Chocolates", Description = "Candies", IsActive = true}
-            };
+            var categories = _categoryRepository.List();
             return categories;
         }
     }
