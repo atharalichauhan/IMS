@@ -34,11 +34,6 @@ namespace IMS.Core.Entities
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or sets the date Supplier is Added
-        /// </summary>
-        public DateTime DateCreated { get; set; }
-
-        /// <summary>
         /// Gets or sets status(active/inactive) of Supplier
         /// </summary>
         public bool IsActive { get; set; }

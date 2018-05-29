@@ -15,19 +15,10 @@ namespace IMS.Core.Entities
         public int SupplierId { get; set; }
 
         /// <summary>
-        /// Gets or sets the address foreign key in Purchase Order
-        /// </summary>
-        public int AddressId { get; set; }
-
-        /// <summary>
         /// Gets or sets the tax foreign key in Purchase Order
         /// </summary>
         public int TaxId { get; set; }
 
-        /// <summary>
-        /// Gets or sets the order date in Purchase Order
-        /// </summary>
-        public DateTime OrderDate { get; set; }
 
         /// <summary>
         /// Gets or sets the remark in Purchase Order
@@ -43,11 +34,6 @@ namespace IMS.Core.Entities
         /// Gets or sets the supplier in Purchase Order
         /// </summary>
         public virtual Supplier Supplier { get; set; }
-
-        /// <summary>
-        /// Gets or sets the address in Purchase Order
-        /// </summary>
-        public virtual Address Address { get; set; }
 
         /// <summary>
         /// Gets or sets the tax in Purchase Order

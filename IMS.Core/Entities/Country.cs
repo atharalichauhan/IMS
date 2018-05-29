@@ -26,11 +26,6 @@ namespace IMS.Core.Entities
         public virtual ICollection<StateProvince> StateProvinces { get; set; }
 
         /// <summary>
-        /// Gets or sets the date country is added
-        /// </summary>
-        public DateTime DateCreated { get; set; }
-
-        /// <summary>
         /// Gets or sets the status(active/inactive) of Country
         /// </summary>
         public bool IsActive { get; set; }

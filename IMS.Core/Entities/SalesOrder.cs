@@ -15,19 +15,9 @@ namespace IMS.Core.Entities
         public int CustomerId { get; set; }
 
         /// <summary>
-        /// Gets or sets the address foreign key in Sales Order
-        /// </summary>
-        public int AddressId { get; set; }
-
-        /// <summary>
         /// Gets or sets the tax foreign key in Sales Order
         /// </summary>
         public int TaxId { get; set; }
-
-        /// <summary>
-        /// Gets or sets the Order Date in Sales Order
-        /// </summary>
-        public DateTime OrderDate { get; set; }
 
         /// <summary>
         /// Gets or sets the status of Sales Order
@@ -48,11 +38,6 @@ namespace IMS.Core.Entities
         /// Gets or sets the customer in Sales Order
         /// </summary>
         public virtual Customer Customer { get; set; }
-
-        /// <summary>
-        /// Gets or sets the address in Sales Order
-        /// </summary>
-        public virtual Address Address { get; set; }
 
         /// <summary>
         /// Gets or sets the line items in Sales Order

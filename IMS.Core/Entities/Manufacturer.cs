@@ -36,11 +36,6 @@ namespace IMS.Core.Entities
         public string ContactNumber { get; set; }
 
         /// <summary>
-        /// Gets or sets the date Manufacturer is added
-        /// </summary>
-        public DateTime DateCreated { get; set; }
-
-        /// <summary>
         /// Gets or sets the status (active/inactive) of Manufacturer
         /// </summary>
         public bool IsActive { get; set; }

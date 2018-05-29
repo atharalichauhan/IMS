@@ -24,11 +24,6 @@ namespace IMS.Core.Entities
         public string Abbreviation { get; set; }
 
         /// <summary>
-        /// Gets or sets the date StateProvince is added
-        /// </summary>
-        public DateTime DateCreated { get; set; }
-
-        /// <summary>
         /// Gets or sets the country in StateProvince
         /// </summary>
         public virtual Country Country { get; set; }

@@ -1,4 +1,5 @@
-﻿using IMS.Core.Interfaces;
+﻿using AutoMapper;
+using IMS.Core.Interfaces;
 using IMS.Web.ViewModels;
 using System.Collections.Generic;
 using System.Web.Mvc;
@@ -18,7 +19,9 @@ namespace IMS.Controllers
         // GET: Category
         public ViewResult Index()
         {
-            return View();
+            var categories = _categoryService.GetAllCategories();
+            var categoryVm = Mapper.Map<List<CategoryViewModel>>(categories);
+            return View(categoryVm);
         }
 
     }

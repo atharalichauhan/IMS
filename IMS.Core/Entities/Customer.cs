@@ -35,11 +35,6 @@ namespace IMS.Core.Entities
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or sets the date Customer is Added
-        /// </summary>
-        public DateTime DateCreated { get; set; }
-
-        /// <summary>
         /// Gets or sets status(active/inactive) of Customer
         /// </summary>
 

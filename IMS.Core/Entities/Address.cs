@@ -40,11 +40,6 @@ namespace IMS.Core.Entities
         public string ZipPostalCode { get; set; }
 
         /// <summary>
-        /// Gets or sets the date Address is added
-        /// </summary>
-        public DateTime DateCreated { get; set; }
-
-        /// <summary>
         /// Gets or sets state/province in Address
         /// </summary>
         public virtual StateProvince StateProvince { get; set; }
