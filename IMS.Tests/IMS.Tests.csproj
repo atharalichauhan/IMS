@@ -121,7 +121,7 @@
       <Name>IMS.Infrastructure</Name>
     </ProjectReference>
     <ProjectReference Include="..\IMS\IMS.Web.csproj">
-      <Project>{7BF2443B-CD49-4267-92CE-9A005A390CF5}</Project>
+      <Project>{7bf2443b-cd49-4267-92ce-9a005a390cf5}</Project>
       <Name>IMS.Web</Name>
     </ProjectReference>
   </ItemGroup>

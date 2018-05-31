@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Web.Mvc;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using IMS;
+﻿using System.Web.Mvc;
 using IMS.Controllers;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace IMS.Tests.Controllers
 {

@@ -24,5 +24,25 @@ namespace IMS.Controllers
             return View(categoryVm);
         }
 
+        public ViewResult Create()
+        {
+            return View();
+        }
+
+        public ViewResult Nav()
+        {
+            return View("base-navs");
+        }
+
+        public ViewResult Form()
+        {
+            return View("base-forms");
+        }
+        public ViewResult BreadCrumb()
+        {
+            return View("base-breadcrumb");
+        }
+
+
     }
 }
