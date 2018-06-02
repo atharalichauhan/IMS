@@ -1,11 +1,9 @@
-﻿namespace IMS.Web.ViewModels
+﻿using IMS.Core.SharedKernel;
+
+namespace IMS.Web.ViewModels
 {
-    public class ProductViewModel
+    public class ProductViewModel : BaseViewModel
     {
-        /// <summary>
-        /// Gets or sets the Product Identifier
-        /// </summary>
-        public int ProductId { get; set; }
 
         /// <summary>
         /// Gets or sets the Category Foreign key in Product

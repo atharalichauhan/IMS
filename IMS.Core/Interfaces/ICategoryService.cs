@@ -22,7 +22,7 @@ namespace IMS.Core.Interfaces
         /// Get all categories
         /// </summary>
         /// <returns>Categories</returns>
-        List<Category> GetAllCategories();
+        IEnumerable<Category> GetAllCategories();
 
         /// <summary>
         /// Inserts a category

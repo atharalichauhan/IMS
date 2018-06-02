@@ -62,6 +62,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SharedKernel\BaseDomainEvent.cs" />
     <Compile Include="SharedKernel\BaseEntity.cs" />
+    <Compile Include="SharedKernel\BaseViewModel.cs" />
     <Compile Include="SharedKernel\IgnoreMemberAttribute.cs" />
     <Compile Include="SharedKernel\ValueObject.cs" />
   </ItemGroup>

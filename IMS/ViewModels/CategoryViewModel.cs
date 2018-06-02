@@ -1,12 +1,11 @@
-﻿using System;
+﻿using IMS.Core.SharedKernel;
+using System;
 using System.Collections.Generic;
 
 namespace IMS.Web.ViewModels
 {
-    public class CategoryViewModel
+    public class CategoryViewModel : BaseViewModel
     {
-        public int CategoryId { get; set; }
-
         /// <summary>
         /// Gets or sets the name of Category
         /// </summary>
@@ -27,9 +26,5 @@ namespace IMS.Web.ViewModels
         /// </summary>
         public bool IsActive { get; set; }
 
-        /// <summary>
-        /// Gets or sets the date Category was added
-        /// </summary>
-        public DateTime DateCreated { get; set; }
     }
 }
