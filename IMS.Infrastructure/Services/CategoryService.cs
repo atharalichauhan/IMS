@@ -66,14 +66,9 @@ namespace IMS.Infrastructure.Services
             _categoryRepository.Update(Category);
         }
 
-        public IEnumerable<Category> GetAllCategories()
+        public List<Category> GetAllCategories()
         {
-            //var categories = _categoryRepository.List();
-            var categories = new List<Category>
-            {
-                new Category{Id = 1,Name = "Athar",Description = "Chauhan",IsActive = true},
-                new Category{Id = 2, Name = "ABC", Description = "Alpha", IsActive = true}
-            };
+            var categories = _categoryRepository.List();
             return categories;
         }
     }

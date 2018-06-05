@@ -1,5 +1,4 @@
 ﻿using IMS.Core.SharedKernel;
-using System;
 using System.Collections.Generic;
 
 namespace IMS.Web.ViewModels

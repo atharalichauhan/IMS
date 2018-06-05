@@ -53,6 +53,10 @@
     <Compile Include="Migrations\201805292055161_CreateTablesFromEntities.Designer.cs">
       <DependentUpon>201805292055161_CreateTablesFromEntities.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806041042073_AddedDateOccuredInBaseEntity.cs" />
+    <Compile Include="Migrations\201806041042073_AddedDateOccuredInBaseEntity.Designer.cs">
+      <DependentUpon>201806041042073_AddedDateOccuredInBaseEntity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CategoryService.cs" />
@@ -75,6 +79,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201805292055161_CreateTablesFromEntities.resx">
       <DependentUpon>201805292055161_CreateTablesFromEntities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806041042073_AddedDateOccuredInBaseEntity.resx">
+      <DependentUpon>201806041042073_AddedDateOccuredInBaseEntity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

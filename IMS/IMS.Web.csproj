@@ -774,7 +774,6 @@
     <Content Include="js\popovers.js.map" />
     <Content Include="js\tooltips.js.map" />
     <Content Include="js\widgets.js.map" />
-    <Content Include="lib\_coreui\coreui-plugin-chartjs-custom-tooltips\dist\js\custom-tooltips.min.js.map" />
     <Content Include="lib\_coreui\icons\css\coreui-icons.min.css.map" />
     <Content Include="lib\_coreui\icons\fonts\CoreUI-Icons-Linear.eot" />
     <Content Include="lib\_coreui\icons\fonts\CoreUI-Icons-Linear.ttf" />
@@ -855,6 +854,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="lib\_coreui\coreui\dist\js\coreui.min.js.map" />
+    <Content Include="lib\_coreui\coreui-plugin-chartjs-custom-tooltips\dist\js\custom-tooltips.min.js.map" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>

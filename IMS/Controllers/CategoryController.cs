@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using AutoMapper;
 using IMS.Core.Entities;
 using IMS.Core.Interfaces;
-using IMS.Infrastructure.Data;
 using IMS.Web.ViewModels;
 
 namespace IMS.Controllers
@@ -27,7 +21,7 @@ namespace IMS.Controllers
 
         public ViewResult Index()
         {           
-            return View();
+            return View(GetAllCategories());
         }
 
         /// <summary>
@@ -59,6 +53,7 @@ namespace IMS.Controllers
         // GET: Category/Create
         public ViewResult Create()
         {
+            
             return View();
         }
 
@@ -74,7 +69,6 @@ namespace IMS.Controllers
                 _unitOfWork.Commit();
                 return RedirectToAction("Index");
             }
-
             return View(categoryVm);
         }
 

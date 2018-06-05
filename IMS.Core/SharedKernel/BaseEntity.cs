@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System;
 
 namespace IMS.Core.SharedKernel
 {
@@ -6,7 +6,6 @@ namespace IMS.Core.SharedKernel
     public abstract class BaseEntity
     {
         public int Id { get; set; }
-
-        public List<BaseDomainEvent> Events = new List<BaseDomainEvent>();
+        public DateTime DateOccurred { get; set; }
     }
 }

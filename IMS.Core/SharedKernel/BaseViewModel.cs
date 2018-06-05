@@ -1,11 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
 
 namespace IMS.Core.SharedKernel
 {
     public class BaseViewModel
     {
         public int Id { get; set; }
-
-        public List<BaseDomainEvent> Events = new List<BaseDomainEvent>();
+        public DateTime DateOccurred { get; protected set; } = DateTime.UtcNow;
     }
 }
