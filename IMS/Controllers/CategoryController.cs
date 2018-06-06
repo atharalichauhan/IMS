@@ -53,8 +53,9 @@ namespace IMS.Controllers
         // GET: Category/Create
         public ViewResult Create()
         {
-            
-            return View();
+            CategoryViewModel category = new CategoryViewModel();
+            category.IsActive = true;
+            return View(category);
         }
 
 
@@ -84,7 +85,10 @@ namespace IMS.Controllers
             {
                 return HttpNotFound();
             }
-            return View(category);
+
+            var categoryVm = Mapper.Map<Category, CategoryViewModel>(category);
+
+            return View(categoryVm);
         }
 
         // POST: Category/Edit/5
@@ -114,7 +118,9 @@ namespace IMS.Controllers
             {
                 return HttpNotFound();
             }
-            return View(category);
+
+            var categoryVm = Mapper.Map<Category, CategoryViewModel>(category);
+            return View(categoryVm);
         }
 
         // POST: Category/Delete/5
