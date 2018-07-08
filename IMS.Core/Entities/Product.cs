@@ -49,6 +49,11 @@ namespace IMS.Core.Entities
         public decimal? AvgSellingPrice { get; set; }
 
         /// <summary>
+        ///  Gets or sets the status (active/inactive) of product 
+        /// </summary>
+        public bool IsActive { get; set; }
+
+        /// <summary>
         /// Gets or sets the Category in Product
         /// </summary>
         public virtual Category Category { get; set; }

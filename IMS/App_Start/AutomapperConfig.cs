@@ -4,13 +4,20 @@ using IMS.Web.ViewModels;
 
 namespace IMS.App_Start
 {
-    public class AutomapperConfig
+    public class AutomapperConfig : Profile
     {
+
         public static void CreateMaps()
         {
-            Mapper.Initialize(cfg => cfg.CreateMap<Category, CategoryViewModel>().ReverseMap());
+            Mapper.Initialize(m =>
+            {
+                m.AddProfile<AutomapperConfig>();
+            });
+        }
+        public AutomapperConfig()
+        {
+           CreateMap<Category, CategoryViewModel>().ReverseMap();
+           CreateMap<Product, ProductViewModel>().ReverseMap();        
         }
     }
-    
-
 }

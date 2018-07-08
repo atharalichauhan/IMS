@@ -1,8 +1,5 @@
-﻿using Autofac;
-using Autofac.Integration.Mvc;
-using IMS.App_Start;
+﻿using IMS.App_Start;
 using System.Web.Mvc;
-using System.Web.Optimization;
 using System.Web.Routing;
 
 namespace IMS

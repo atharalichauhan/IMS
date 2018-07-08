@@ -57,11 +57,20 @@
     <Compile Include="Migrations\201806041042073_AddedDateOccuredInBaseEntity.Designer.cs">
       <DependentUpon>201806041042073_AddedDateOccuredInBaseEntity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806071625395_AddedIsActiveToProduct.cs" />
+    <Compile Include="Migrations\201806071625395_AddedIsActiveToProduct.Designer.cs">
+      <DependentUpon>201806071625395_AddedIsActiveToProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807081304360_AddedIsActiveToStateProvince.cs" />
+    <Compile Include="Migrations\201807081304360_AddedIsActiveToStateProvince.Designer.cs">
+      <DependentUpon>201807081304360_AddedIsActiveToStateProvince.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CategoryService.cs" />
     <Compile Include="Services\ProductService.cs" />
     <Compile Include="Data\UnitOfWork.cs" />
+    <Compile Include="Services\StateProvinceService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IMS.Core\IMS.Core.csproj">
@@ -82,6 +91,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806041042073_AddedDateOccuredInBaseEntity.resx">
       <DependentUpon>201806041042073_AddedDateOccuredInBaseEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806071625395_AddedIsActiveToProduct.resx">
+      <DependentUpon>201806071625395_AddedIsActiveToProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807081304360_AddedIsActiveToStateProvince.resx">
+      <DependentUpon>201807081304360_AddedIsActiveToStateProvince.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,5 +1,6 @@
 ﻿using IMS.Core.SharedKernel;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace IMS.Web.ViewModels
 {
@@ -8,11 +9,14 @@ namespace IMS.Web.ViewModels
         /// <summary>
         /// Gets or sets the name of Category
         /// </summary>
+        [Required]
+        [StringLength(100)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or sets the description of Category
         /// </summary>
+        [StringLength(200)]
         public string Description { get; set; }
 
         /// <summary>

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<IMS.Web.ViewModels.CategoryViewModel>
+﻿@model IEnumerable<IMS.Web.ViewModels.ProductViewModel>
 
 <div class="container-fluid">
   <div id="ui-view">
@@ -6,7 +6,7 @@
       <link href="~/Content/DataTables-1.10.16/css/dataTables.bootstrap4.css" rel="stylesheet" />
       <div class="card">
         <div class="card-header">
-          @Html.ActionLink("Add Category", "Create", "Category", null, new { @class = "btn btn-primary" })
+          @Html.ActionLink("Add Product", "Create", "Product", null, new { @class = "btn btn-primary" })
         </div>
         <div class="card-body">
           <div id="DataTables_Table_0_wrapper">
@@ -41,10 +41,10 @@
                           }
                         </td>
                         <td>
-                          <a class="btn btn-info edit" href="/Category/Edit?id=@item.Id">
+                          <a class="btn btn-info edit" href="/Product/Edit?id=@item.Id">
                             <i class="fa fa-edit "></i>
                           </a>
-                          <a class="btn btn-danger delete" href="/Category/Delete?id=@item.Id">
+                          <a class="btn btn-danger delete" href="/Product/Delete?id=@item.Id">
                             <i class="fa fa-trash-o "></i>
                           </a>
                         </td>

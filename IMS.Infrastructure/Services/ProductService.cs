@@ -8,13 +8,13 @@ namespace IMS.Infrastructure.Services
 {
     public class ProductService : IProductService
     {
-        private readonly Repository<Product> _productRepository;
+        private readonly IRepository<Product> _productRepository;
 
         /// <summary>
         /// ctor
         /// </summary>
         /// <param name="productRepository">ProductRepository</param>
-        public ProductService(Repository<Product> productRepository)
+        public ProductService(IRepository<Product> productRepository)
         {
             _productRepository = productRepository;
         }

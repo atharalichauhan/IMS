@@ -1,5 +1,4 @@
 ﻿using IMS.Core.SharedKernel;
-using System;
 
 namespace IMS.Core.Entities
 {
@@ -27,6 +26,11 @@ namespace IMS.Core.Entities
         /// Gets or sets the country in StateProvince
         /// </summary>
         public virtual Country Country { get; set; }
+
+        /// <summary>
+        /// Gets or sets the status(active/inactive) of StateProvince
+        /// </summary>
+        public bool IsActive { get; set; }
 
     }
 }

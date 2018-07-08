@@ -20,7 +20,7 @@ namespace IMS.Controllers
         }
 
         public ViewResult Index()
-        {           
+        {
             return View(GetAllCategories());
         }
 
@@ -35,22 +35,7 @@ namespace IMS.Controllers
             return categoriesVm;
         }
 
-        //// GET: Category/Details/5
-        //public ActionResult Details(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    Category category = db.Categories.Find(id);
-        //    if (category == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(category);
-        //}
 
-        // GET: Category/Create
         public ViewResult Create()
         {
             CategoryViewModel category = new CategoryViewModel();
@@ -61,7 +46,7 @@ namespace IMS.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Description,IsActive")] CategoryViewModel categoryVm)
+        public ActionResult Create(CategoryViewModel categoryVm)
         {
             if (ModelState.IsValid)
             {
@@ -73,7 +58,6 @@ namespace IMS.Controllers
             return View(categoryVm);
         }
 
-        // GET: Category/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -86,19 +70,18 @@ namespace IMS.Controllers
                 return HttpNotFound();
             }
 
-            var categoryVm = Mapper.Map<Category, CategoryViewModel>(category);
+            CategoryViewModel categoryVm = Mapper.Map<Category, CategoryViewModel>(category);
 
             return View(categoryVm);
         }
 
-        // POST: Category/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Description,IsActive")] CategoryViewModel categoryVm)
+        public ActionResult Edit(CategoryViewModel categoryVm)
         {
             if (ModelState.IsValid)
             {
-                var category = Mapper.Map<CategoryViewModel, Category>(categoryVm);
+                Category category = Mapper.Map<CategoryViewModel, Category>(categoryVm);
                 _categoryService.UpdateCategory(category);
                 _unitOfWork.Commit();
                 return RedirectToAction("Index");
@@ -106,7 +89,6 @@ namespace IMS.Controllers
             return View(categoryVm);
         }
 
-        // GET: Category/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -123,7 +105,6 @@ namespace IMS.Controllers
             return View(categoryVm);
         }
 
-        // POST: Category/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

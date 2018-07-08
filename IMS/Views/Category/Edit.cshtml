@@ -1,5 +1,59 @@
-﻿@{
-    ViewBag.Title = "Edit";
+﻿@model IMS.Web.ViewModels.CategoryViewModel
+
+@{
+  ViewBag.Title = "Edit";
 }
 
-@Html.Partial("_CreateOrEditPartial")
+@using (Html.BeginForm())
+{
+  @Html.AntiForgeryToken()
+
+  <div class="container-fluid">
+    <div id="ui-view">
+      <div class="card">
+        <div class="card-header">
+          <strong>Category</strong>
+          <small>Form</small>
+        </div>
+        <div class="card-body">
+          @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+          <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "col-form-label" })
+            <div class="controls">
+              <div class="input-group">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", autofocus = "autofocus" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "col-form-label" })
+            <div class="controls">
+              <div class="input-group">
+                @Html.TextAreaFor(model => model.Description, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            @Html.LabelFor(model => model.IsActive, htmlAttributes: new { @class = "col-form-label" })
+            <div class="controls">
+              <div class="input-group">
+                @Html.EditorFor(model => model.IsActive, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "text-danger" })
+              </div>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Save</button>
+            @Html.ActionLink("Back to List", "Index", "", new { @class = "btn btn-secondary" })
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+}

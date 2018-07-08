@@ -1,4 +1,7 @@
 ﻿using IMS.Core.SharedKernel;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
 namespace IMS.Web.ViewModels
 {
@@ -13,16 +16,20 @@ namespace IMS.Web.ViewModels
         /// <summary>
         /// Gets or sets the name of Product
         /// </summary>
+        [Required]
+        [StringLength(100)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or sets the description of Product
         /// </summary>
+        [StringLength(200)]
         public string Description { get; set; }
 
         /// <summary>
         /// Gets or sets the code of Product
         /// </summary>
+        [Required]
         public string ProductCode { get; set; }
 
         /// <summary>
@@ -45,9 +52,20 @@ namespace IMS.Web.ViewModels
         /// </summary>
         public decimal? AvgSellingPrice { get; set; }
 
+
+        /// <summary>
+        ///  Gets or sets the status (active/inactive) of product 
+        /// </summary>
+        public bool IsActive { get; set; }
+
         /// <summary>
         /// Gets or sets the Category in Product
         /// </summary>
         public virtual CategoryViewModel Category { get; set; }
+
+        /// <summary>
+        /// Gets categories list  
+        /// </summary>
+        public IEnumerable<SelectListItem> Categories { get; set; }
     }
 }

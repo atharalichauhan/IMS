@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using Autofac.Integration.Mvc;
+using AutoMapper;
 using IMS.Core.Interfaces;
 using IMS.Infrastructure.Data;
 using System.Linq;
