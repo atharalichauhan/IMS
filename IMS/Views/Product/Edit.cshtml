@@ -1,4 +1,4 @@
-﻿@model IMS.Web.ViewModels.ProductViewModel
+﻿@model IMS.ViewModels.ProductViewModel
 
 @{
   ViewBag.Title = "Edit";
@@ -95,7 +95,7 @@
 
           <div class="form-actions">
             <button type="submit" class="btn btn-primary">Save</button>
-            @Html.ActionLink("Back to List", "Index", "", new { @class = "btn btn-secondary" })
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary" })
           </div>
         </div>
       </div>

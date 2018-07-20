@@ -8,54 +8,56 @@ using IMS.ViewModels;
 
 namespace IMS.Controllers
 {
-    public class CategoryController : Controller
+    public class CountryController : Controller
     {
-        private readonly ICategoryService _categoryService;
+        private readonly ICountryService _countryService;
         private readonly IUnitOfWork _unitOfWork;
 
-        public CategoryController(ICategoryService categoryService, IUnitOfWork unitOfWork)
+        public CountryController(ICountryService countryService, IUnitOfWork unitOfWork)
         {
-            _categoryService = categoryService;
+            _countryService = countryService;
             _unitOfWork = unitOfWork;
         }
 
         public ViewResult Index()
         {
-            return View(GetAllCategories());
+            return View(GetAllCountries());
         }
 
         /// <summary>
-        /// Get All Categories
+        /// Get All Countries
         /// </summary>
-        /// <returns>List of categories</returns>
-        public IEnumerable<CategoryViewModel> GetAllCategories()
+        /// <returns>List of countries</returns>
+        public IEnumerable<CountryViewModel> GetAllCountries()
         {
-            var categories = _categoryService.GetAllCategories();
-            var categoriesVm = Mapper.Map<IEnumerable<Category>, IEnumerable<CategoryViewModel>>(categories);
-            return categoriesVm;
+            var countries = _countryService.GetAllCountries();
+            var countriesVm = Mapper.Map<IEnumerable<Country>, IEnumerable<CountryViewModel>>(countries);
+            return countriesVm;
         }
 
 
         public ViewResult Create()
         {
-            CategoryViewModel category = new CategoryViewModel();
-            category.IsActive = true;
-            return View(category);
+            CountryViewModel countryVm = new CountryViewModel
+            {
+                IsActive = true
+            };
+            return View(countryVm);
         }
 
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(CategoryViewModel categoryVm)
+        public ActionResult Create(CountryViewModel countryVm)
         {
             if (ModelState.IsValid)
             {
-                Category category = Mapper.Map<CategoryViewModel, Category>(categoryVm);
-                _categoryService.InsertCategory(category);
+                Country country = Mapper.Map<CountryViewModel, Country>(countryVm);
+                _countryService.InsertCountry(country);
                 _unitOfWork.Commit();
                 return RedirectToAction("Index");
             }
-            return View(categoryVm);
+            return View(countryVm);
         }
 
         public ActionResult Edit(int? id)
@@ -64,29 +66,29 @@ namespace IMS.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Category category = _categoryService.GetCategoryById(id.Value);
-            if (category == null)
+            Country country = _countryService.GetCountryById(id.Value);
+            if (country == null)
             {
                 return HttpNotFound();
             }
 
-            CategoryViewModel categoryVm = Mapper.Map<Category, CategoryViewModel>(category);
+            CountryViewModel countryVm = Mapper.Map<Country, CountryViewModel>(country);
 
-            return View(categoryVm);
+            return View(countryVm);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(CategoryViewModel categoryVm)
+        public ActionResult Edit(CountryViewModel countryVm)
         {
             if (ModelState.IsValid)
             {
-                Category category = Mapper.Map<CategoryViewModel, Category>(categoryVm);
-                _categoryService.UpdateCategory(category);
+                Country country = Mapper.Map<CountryViewModel, Country>(countryVm);
+                _countryService.UpdateCountry(country);
                 _unitOfWork.Commit();
                 return RedirectToAction("Index");
             }
-            return View(categoryVm);
+            return View(countryVm);
         }
 
         public ActionResult Delete(int? id)
@@ -95,22 +97,22 @@ namespace IMS.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Category category = _categoryService.GetCategoryById(id.Value);
-            if (category == null)
+            Country country = _countryService.GetCountryById(id.Value);
+            if (country == null)
             {
                 return HttpNotFound();
             }
 
-            var categoryVm = Mapper.Map<Category, CategoryViewModel>(category);
-            return View(categoryVm);
+            var countryVm = Mapper.Map<Country, CountryViewModel>(country);
+            return View(countryVm);
         }
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Category category = _categoryService.GetCategoryById(id);
-            _categoryService.DeleteCategory(category);
+            Country country = _countryService.GetCountryById(id);
+            _countryService.DeleteCountry(country);
             _unitOfWork.Commit();
             return RedirectToAction("Index");
         }

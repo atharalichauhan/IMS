@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace IMS.Web.ViewModels
+namespace IMS.ViewModels
 {
     public class CategoryViewModel : BaseViewModel
     {

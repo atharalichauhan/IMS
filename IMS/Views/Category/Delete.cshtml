@@ -1,4 +1,4 @@
-﻿@model IMS.Web.ViewModels.CategoryViewModel
+﻿@model IMS.ViewModels.CategoryViewModel
 
 @{
   ViewBag.Title = "Delete";
@@ -58,7 +58,7 @@
           </dl>
           <div class="form-actions">
             <input type="submit" value="Delete" class="btn btn-primary" /> |
-            @Html.ActionLink("Back to List", "Index", "", new { @class = "btn btn-secondary" })
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary" })
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using IMS.Core.Entities;
 using IMS.Core.Interfaces;
-using IMS.Web.ViewModels;
+using IMS.ViewModels;
 using System.Collections.Generic;
 using System.Net;
 using System.Web.Mvc;

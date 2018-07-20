@@ -21,5 +21,10 @@ namespace IMS.Infrastructure.Data
         public DbSet<StateProvince> StateProvinces { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<Tax> Taxes { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

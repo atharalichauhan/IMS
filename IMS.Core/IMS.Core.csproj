@@ -54,6 +54,7 @@
     <Compile Include="Entities\Supplier.cs" />
     <Compile Include="Entities\Tax.cs" />
     <Compile Include="Interfaces\ICategoryService.cs" />
+    <Compile Include="Interfaces\ICountryService.cs" />
     <Compile Include="Interfaces\IProductService.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Interfaces\IStateProvinceService.cs" />

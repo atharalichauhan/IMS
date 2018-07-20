@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 
-namespace IMS.Web.ViewModels
+namespace IMS.ViewModels
 {
     public class ProductViewModel : BaseViewModel
     {

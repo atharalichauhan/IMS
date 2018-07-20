@@ -1,5 +1,7 @@
 ﻿using IMS.Core.SharedKernel;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
 namespace IMS.ViewModels
 {
@@ -16,5 +18,9 @@ namespace IMS.ViewModels
         public string Abbreviation { get; set; }
 
         public CountryViewModel Country { get; set; }
+
+        public IEnumerable<SelectListItem> Countries { get; set; }
+
+        public bool IsActive { get; set; }
     }
 }

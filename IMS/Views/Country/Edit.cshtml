@@ -1,4 +1,4 @@
-﻿@model IMS.ViewModels.CategoryViewModel
+﻿@model IMS.ViewModels.CountryViewModel
 
 @{
   ViewBag.Title = "Edit";
@@ -12,7 +12,7 @@
     <div id="ui-view">
       <div class="card">
         <div class="card-header">
-          <strong>Category</strong>
+          <strong>Country</strong>
           <small>Form</small>
         </div>
         <div class="card-body">
@@ -28,11 +28,11 @@
           </div>
 
           <div class="form-group">
-            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "col-form-label" })
+            @Html.LabelFor(model => model.Abbreviation, htmlAttributes: new { @class = "col-form-label" })
             <div class="controls">
               <div class="input-group">
-                @Html.TextAreaFor(model => model.Description, new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                @Html.TextAreaFor(model => model.Abbreviation, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Abbreviation, "", new { @class = "text-danger" })
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using IMS.Core.Entities;
-using IMS.Web.ViewModels;
+using IMS.ViewModels;
 
 namespace IMS.App_Start
 {
@@ -17,7 +17,10 @@ namespace IMS.App_Start
         public AutomapperConfig()
         {
            CreateMap<Category, CategoryViewModel>().ReverseMap();
-           CreateMap<Product, ProductViewModel>().ReverseMap();        
+           CreateMap<Product, ProductViewModel>().ReverseMap();
+            CreateMap<Country, CountryViewModel>().ReverseMap();
+            CreateMap<StateProvince, StateProvinceViewModel>().ReverseMap();
+            CreateMap<SalesOrder, SalesOrderViewModel>().ReverseMap();
         }
     }
 }

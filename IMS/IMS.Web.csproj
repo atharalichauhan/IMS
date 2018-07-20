@@ -168,10 +168,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\CountryController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
-    <Compile Include="Controllers\StateProvinceController.cs" />
+    <Compile Include="Controllers\StateProvincesController.cs" />
     <Compile Include="Filters\LogAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -180,6 +181,7 @@
     <Compile Include="ViewModels\CategoryViewModel.cs" />
     <Compile Include="ViewModels\CountryViewModel.cs" />
     <Compile Include="ViewModels\ProductViewModel.cs" />
+    <Compile Include="ViewModels\SalesOrderViewModel.cs" />
     <Compile Include="ViewModels\StateProvinceViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -865,9 +867,12 @@
     <Content Include="Views\Product\Index.cshtml" />
     <Content Include="Views\Error\404.cshtml" />
     <Content Include="Views\Error\500.cshtml" />
+    <Content Include="Views\Country\Create.cshtml" />
+    <Content Include="Views\Country\Delete.cshtml" />
+    <Content Include="Views\Country\Edit.cshtml" />
+    <Content Include="Views\Country\Index.cshtml" />
     <Content Include="Views\StateProvinces\Create.cshtml" />
     <Content Include="Views\StateProvinces\Delete.cshtml" />
-    <Content Include="Views\StateProvinces\Details.cshtml" />
     <Content Include="Views\StateProvinces\Edit.cshtml" />
     <Content Include="Views\StateProvinces\Index.cshtml" />
   </ItemGroup>
